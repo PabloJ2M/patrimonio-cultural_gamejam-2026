@@ -4,11 +4,11 @@ using UnityEngine;
 public class NPC_Sequencer : MonoBehaviour
 {
     [SerializeField] private int maxEntities;
-    [SerializeField] private ScriptableCharacter[] characters;
+    // [SerializeField] private ScriptableCharacter[] characters;
     
     private IEnumerator Start()
     {
-        var character = characters[Random.Range(0, characters.Length)];
+        // var character = characters[Random.Range(0, characters.Length)];
         
         yield break;
     }

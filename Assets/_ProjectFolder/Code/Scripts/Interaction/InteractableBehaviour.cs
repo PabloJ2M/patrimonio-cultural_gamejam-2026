@@ -7,21 +7,28 @@ public abstract class InteractableBehaviour : MonoBehaviour, IInteractable
     private const string HighlightLayer = "Highlight";
     
     protected bool IsSelected;
+    protected bool IsHighlighted;
     
     public virtual void Select(bool isPressed)
     {
-        gameObject.layer = LayerMask.NameToLayer(HighlightLayer);
+        gameObject.SetLayerRecursively(LayerMask.NameToLayer(DefaultLayer));
+        gameObject.SetLayerRecursively(LayerMask.NameToLayer(DefaultLayer));
         IsSelected = isPressed;
     }
 
     public virtual void Highlighted()
     {
-        gameObject.layer = LayerMask.NameToLayer(DefaultLayer);
+        if (IsHighlighted) return;
+        
+        gameObject.SetLayerRecursively(LayerMask.NameToLayer(HighlightLayer));
+        IsHighlighted = true;
     }
     public virtual void UnHightlighted()
     {
-        gameObject.layer = LayerMask.NameToLayer(BaseLayer);
-        IsSelected = false;
+        if (!IsHighlighted) return;
+        
+        gameObject.SetLayerRecursively(LayerMask.NameToLayer(BaseLayer));
+        IsSelected = IsHighlighted = false;
     }
 
     public void ForceUnInteract() => Select(false);

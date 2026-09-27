@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: "Se\xF1oraChacrosa"
+  m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
+  soulStereotype: "La Se\xF1ora Chacrosa"
+  description: "Vendedora de cuarzos falsos como aut\xE9nticos"
+  dni:
+    name: "Rosa Garc\xEDa"
+    age: 52
+    occupation: Vendedora de minerales
+    identityDeclaration: Experta en cuarzos naturales
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: "Rosa Garc\xEDa"
+    profession: Curadora de Cristales
+    yearsOfExperience: 15
+    achievements:
+    - "Vendo cristales 'aut\xE9nticos'"
+    - "Prometo sanaci\xF3n espiritual"
+    crimes:
+    - description: Cuarzos con etiqueta 'Hecho en Gamarra'
+      visualEvidence: Etiqueta pegada recientemente, pegamento visible
+      lawBroken: 0
+    - description: Fotos descargadas de Internet como propias
+      visualEvidence: Logo de Shutterstock en la esquina
+      lawBroken: 1
+  belongings: []
+  actualLawsBroken: 0000000001000000
+  isGoodSoul: 0
+  appearDay: 1

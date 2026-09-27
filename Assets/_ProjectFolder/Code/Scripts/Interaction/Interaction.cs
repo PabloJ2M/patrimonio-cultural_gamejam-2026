@@ -22,6 +22,7 @@ public class Interaction : MonoBehaviour
     {
         _isPressed = ctx.action.IsPressed();
         _currentInteraction?.Select(_isPressed);
+        _currentInteraction?.UnHightlighted();
     }
 
     #if UNITY_EDITOR
@@ -44,20 +45,20 @@ public class Interaction : MonoBehaviour
         if (_isPressed) return;
         
         if (!hitCollider) {
-            Deselect();
+            UnHighlight();
             return;
         }
 
         if (hitCollider.TryGetComponent(out IInteractable interactable))
-            Select(interactable);
+            Highlight(interactable);
     }
 
-    private void Deselect()
+    private void UnHighlight()
     {
         _currentInteraction?.UnHightlighted();
         _currentInteraction = null;
     }
-    private void Select(IInteractable newInteractable)
+    private void Highlight(IInteractable newInteractable)
     {
         if (_currentInteraction == newInteractable) return;
         

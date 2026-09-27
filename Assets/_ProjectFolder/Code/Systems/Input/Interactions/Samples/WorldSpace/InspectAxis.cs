@@ -3,30 +3,36 @@ namespace UnityEngine.InputSystem.Samples
     public class InspectAxis : DragDeltaBehaviour
     {
         [SerializeField] private Vector3 axis;
-        [SerializeField, Min(0f)] private float sensitivity = 1f;
+        [SerializeField, Min(0.1f)] private float sensitivity = 1f, smoothing = 1f;
+        [SerializeField] private bool useLocalAxis = false;
         
-        private Quaternion _targetRotation;
+        [SerializeField] private Vector3 rotationLimitMin = new Vector3(-90, -180, 0);
+        [SerializeField] private Vector3 rotationLimitMax = new Vector3(90, 180, 0);
+        
+        private Vector3 _targetRotation;
+        private Vector3 _currentRotation = Vector3.zero;
 
-        protected override void Start()
+        private void Update()
         {
-            base.Start();
-            _targetRotation = transform.rotation;
+            if (!IsDragging) return;
+            
+            _currentRotation = Vector3.Lerp(_currentRotation, _targetRotation, smoothing);
+            
+            _currentRotation.x = Mathf.Clamp(_currentRotation.x, rotationLimitMin.x, rotationLimitMax.x);
+            _currentRotation.y = Mathf.Clamp(_currentRotation.y, rotationLimitMin.y, rotationLimitMax.y);
+            _currentRotation.z = Mathf.Clamp(_currentRotation.z, rotationLimitMin.z, rotationLimitMax.z);
+            
+            transform.localRotation = Quaternion.Euler(_currentRotation);
         }
         
         protected override void OnUpdateDelta(Vector2 delta)
         {
-            var deltaRotationX = Quaternion.AngleAxis(delta.y * sensitivity, transform.right);
-            var deltaRotationY = Quaternion.AngleAxis(delta.x * sensitivity, transform.up);
-            var deltaRotationZ = Quaternion.identity;
+            var mouseDelta = new Vector3(-delta.y * axis.x * sensitivity,
+                delta.x * axis.y * sensitivity,
+                0f * axis.z * sensitivity
+            );
 
-            var deltaRotation = Quaternion.identity;
-
-            if (axis.y != 0) deltaRotation *= deltaRotationY;
-            if (axis.x != 0) deltaRotation *= deltaRotationX;
-            if (axis.z != 0) deltaRotation *= deltaRotationZ;
-            
-            _targetRotation *= deltaRotation;
-            transform.rotation = _targetRotation;
+            _targetRotation += mouseDelta;
         }
     }
 }

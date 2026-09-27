@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: ChiboloFifas
+  m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
+  soulStereotype: El Chibolo Fifas
+  description: Adolescente que usa ropa falsificada
+  dni:
+    name: "Diego L\xF3pez"
+    age: 16
+    occupation: Estudiante
+    identityDeclaration: "Coleccionista de sneakers aut\xE9nticos"
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: "Diego L\xF3pez"
+    profession: Influencer en redes
+    yearsOfExperience: 1
+    achievements:
+    - 10k followers en TikTok
+    - Todas mis zapatillas son Nike
+    crimes:
+    - description: "Zapatillas 'Adedos' (imitaci\xF3n de Adidas)"
+      visualEvidence: 'Grabado mal hecho: ''Adedos'' en lugar de ''Adidas'''
+      lawBroken: 0
+  belongings: []
+  actualLawsBroken: 00000000
+  isGoodSoul: 0
+  appearDay: 1
