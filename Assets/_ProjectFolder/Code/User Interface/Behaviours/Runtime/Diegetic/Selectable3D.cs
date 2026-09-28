@@ -7,9 +7,9 @@ namespace UnityEngine.EventSystems
         [SerializeField] protected Renderer render;
         [SerializeField] protected ColorBlock colors;
 
-        protected static readonly int ColorID = Shader.PropertyToID("_Color");
-        protected MaterialPropertyBlock _propertyBlock;
-        protected Color _defaultColor;
+        private static readonly int ColorID = Shader.PropertyToID("_Color");
+        private MaterialPropertyBlock _propertyBlock;
+        private Color _defaultColor;
 
         protected virtual void Awake()
         {
@@ -23,7 +23,7 @@ namespace UnityEngine.EventSystems
         public virtual void OnPointerEnter(PointerEventData eventData) => SetColor(colors.highlightedColor);
         public virtual void OnPointerExit(PointerEventData eventData) => SetColor(colors.normalColor);
 
-        private void SetColor(Color color)
+        protected void SetColor(Color color)
         {
             _propertyBlock.SetColor(ColorID, _defaultColor * color);
             render.SetPropertyBlock(_propertyBlock);

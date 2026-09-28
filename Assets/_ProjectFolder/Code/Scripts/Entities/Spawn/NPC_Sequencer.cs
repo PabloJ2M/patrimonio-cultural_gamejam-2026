@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class NPC_Sequencer : MonoBehaviour
 {
-    [SerializeField] private SoulScriptable[] souls;
+    [SerializeField] private ScriptableSoul[] souls;
     [SerializeField] private int currentSoulIndex = 0;
     [SerializeField] private int maxStrikes = 3;
 
-    private SoulScriptable currentSoul;
-    private int totalScore = 0, strikeCount = 0, currentDay = 1;
-    private bool gameOver = false;
+    private ScriptableSoul _currentScriptableSoul;
+    private int _totalScore = 0, _strikeCount = 0, _currentDay = 1;
+    private bool _gameOver = false;
 
-    public Action<SoulScriptable> OnNewSoulLoaded;
-    public Action<int, int> OnScoreChanged;
-    public Action<int> OnStrikesChanged;
-    public Action<bool> OnGameOver;
+    public event Action<ScriptableSoul> OnNewSoulLoaded;
+    public event Action<int, int> OnScoreChanged;
+    public event Action<int> OnStrikesChanged;
+    public event Action<bool> OnGameOver;
+    
+    public ScriptableSoul GetCurrentSoul => _currentScriptableSoul;
+    public int GetTotalScore => _totalScore;
+    public int GetStrikeCount => _strikeCount;
+    public int GetCurrentDay => _currentDay;
+    public bool IsGameOver => _gameOver;
 
     public void LoadNextSoul()
     {
@@ -24,15 +30,15 @@ public class NPC_Sequencer : MonoBehaviour
             return;
         }
 
-        currentSoul = souls[currentSoulIndex];
-        OnNewSoulLoaded?.Invoke(currentSoul);
+        _currentScriptableSoul = souls[currentSoulIndex];
+        OnNewSoulLoaded?.Invoke(_currentScriptableSoul);
     }
     public void OnDestinyDecided(bool sentToHananPacha, HashSet<AndineLawType> markedLaws)
     {
-        if (gameOver) return;
+        if (_gameOver) return;
 
-        bool isCorrect = currentSoul.VerifyVerdict(markedLaws, sentToHananPacha);
-        int roundScore = currentSoul.CalculateScore(markedLaws);
+        var isCorrect = _currentScriptableSoul.VerifyVerdict(markedLaws, sentToHananPacha);
+        var roundScore = _currentScriptableSoul.CalculateScore(markedLaws);
 
         if (isCorrect)
         {
@@ -40,24 +46,23 @@ public class NPC_Sequencer : MonoBehaviour
         }
         else
         {
-            strikeCount++;
-            OnStrikesChanged?.Invoke(strikeCount);
+            _strikeCount++;
+            OnStrikesChanged?.Invoke(_strikeCount);
 
-            if (strikeCount >= maxStrikes)
-            {
+            if (_strikeCount >= maxStrikes) {
                 EndGame();
                 return;
             }
         }
 
-        totalScore += roundScore;
-        OnScoreChanged?.Invoke(roundScore, totalScore);
+        _totalScore += roundScore;
+        OnScoreChanged?.Invoke(roundScore, _totalScore);
 
         currentSoulIndex++;
 
         if (currentSoulIndex % 3 == 0 && currentSoulIndex < souls.Length)
         {
-            currentDay++;
+            _currentDay++;
         }
 
         Invoke(nameof(LoadNextSoul), 2f);
@@ -65,8 +70,8 @@ public class NPC_Sequencer : MonoBehaviour
 
     private void EndGame()
     {
-        gameOver = true;
-        bool won = totalScore >= 300;
+        _gameOver = true;
+        bool won = _totalScore >= 300;
         OnGameOver?.Invoke(won);
     }
 }

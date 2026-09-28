@@ -5,9 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private NPC_Sequencer sequencer;
     [SerializeField] private CinemachineVirtualCameraBase focusCamera;
-
     
-
     private void Awake()
     {
         focusCamera.enabled = false;

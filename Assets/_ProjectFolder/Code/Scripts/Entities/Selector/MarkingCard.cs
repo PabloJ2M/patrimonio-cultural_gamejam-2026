@@ -22,14 +22,15 @@ namespace UkuPacha
             foreach (var item in lawToggles)
                 item.toggle.onValueChanged.AddListener((bool v) => ToggleLaw(item.law, v));
         }
-        private void OnEnable()
+        private void OnEnable() => ResetMarks();
+
+        public void ResetMarks()
         {
             foreach (var item in lawToggles)
                 item.toggle.SetValueWithoutNotify(false);
 
             markedLaws.Clear();
         }
-
         public void ToggleLaw(AndineLawType law, bool add)
         {
             if (add)

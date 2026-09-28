@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "UkuPacha/Soul Data")]
-public class SoulScriptable : ScriptableObject
+public class ScriptableSoul : ScriptableObject
 {
     [Header("Identidad")]
     public string soulStereotype;

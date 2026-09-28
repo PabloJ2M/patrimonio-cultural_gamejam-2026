@@ -247,7 +247,7 @@ namespace UkuPacha
         private static void CreateSoul(string folderPath, string fileName, string stereotype, string description,
             DNIData dniData, CVData cvData, AndineLawType[] brokenLaws, bool isGoodSoul)
         {
-            var soul = ScriptableObject.CreateInstance<SoulScriptable>();
+            var soul = ScriptableObject.CreateInstance<ScriptableSoul>();
             
             soul.soulStereotype = stereotype;
             soul.description = description;
