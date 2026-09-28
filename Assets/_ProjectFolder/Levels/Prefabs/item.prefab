@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5715096643146861930}
   - component: {fileID: 3876428183625920531}
   - component: {fileID: 1279180810195025264}
+  - component: {fileID: 5597322569545920904}
   m_Layer: 0
   m_Name: item
   m_TagString: Untagged
@@ -31,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.31075, y: 1.14, z: 1.22094}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8650343151879645252}
   - {fileID: 5932095585086997408}
@@ -137,6 +138,22 @@ MonoBehaviour:
     toggle: {fileID: 2633050125060364321}
   - law: 2
     toggle: {fileID: 5794162104084770285}
+--- !u!114 &5597322569545920904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251455006830397178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332942b797af51369b4519b970270926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UkuPacha.Dni3D
+  nameTxt: {fileID: 2437164807137785086}
+  ageTxt: {fileID: 0}
+  occupationTxt: {fileID: 2437164807137785086}
+  imageMesh: {fileID: 7246005925774835661}
 --- !u!1 &781663016271911948
 GameObject:
   m_ObjectHideFlags: 0

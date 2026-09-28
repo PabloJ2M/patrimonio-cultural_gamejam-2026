@@ -23,6 +23,11 @@ public class NPC_Sequencer : MonoBehaviour
     public int GetCurrentDay => _currentDay;
     public bool IsGameOver => _gameOver;
 
+    private void Start()
+    {
+        LoadNextSoul();
+    }
+
     public void LoadNextSoul()
     {
         if (currentSoulIndex >= souls.Length) {
