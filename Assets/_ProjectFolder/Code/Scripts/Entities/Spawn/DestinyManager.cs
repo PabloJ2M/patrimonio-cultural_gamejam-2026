@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.Samples;
 
 namespace UkuPacha
 {
     public class DestinyManager : MonoBehaviour
     {
         [SerializeField] private DocumentManager documentManager;
+        [SerializeField] private InspectObjectPoint inspection;
         [SerializeField] private MarkingCard markingCard;
         
         [SerializeField] private Button3D hananPachaButton;
@@ -43,6 +45,7 @@ namespace UkuPacha
             _sequencer?.OnDestinyDecided(toHananPacha, markingCard.GetMarkedLaws);
             
             documentManager?.HideDocuments();
+            inspection?.DeselectObject();
             markingCard?.ResetMarks();
             DisableButtons();
         }

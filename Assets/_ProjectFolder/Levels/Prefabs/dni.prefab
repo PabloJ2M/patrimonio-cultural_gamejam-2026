@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: 1279180810195025264}
   - component: {fileID: 5715096643146861930}
   - component: {fileID: 3876428183625920531}
+  - component: {fileID: 8632645438173448889}
   m_Layer: 0
   m_Name: dni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1454499026486174539
 Transform:
   m_ObjectHideFlags: 0
@@ -137,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca2760196fac914e8ae2b575a039626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.Samples.InspectObjectSelectable
+  selectable: {fileID: 8632645438173448889}
 --- !u!114 &3876428183625920531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +157,28 @@ MonoBehaviour:
   useLocalAxis: 1
   rotationLimitMin: {x: -100, y: -45, z: 0}
   rotationLimitMax: {x: -45, y: 45, z: 0}
+--- !u!114 &8632645438173448889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251455006830397178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b559b0ac2ec63cc4a985dfafb08d160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.EventSystems.Selectable3D
+  isInteractable: 1
+  render: {fileID: 7750836551647499065}
+  colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+    m_PressedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0
 --- !u!1 &781663016271911948
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7656561329e1948a48d932da3b9f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Toggle3D
+  isInteractable: 1
   render: {fileID: 4961165553017190008}
   colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -779,6 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7656561329e1948a48d932da3b9f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Toggle3D
+  isInteractable: 1
   render: {fileID: 5281967960036870453}
   colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -951,6 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7656561329e1948a48d932da3b9f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Toggle3D
+  isInteractable: 1
   render: {fileID: 8145545598579062734}
   colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}

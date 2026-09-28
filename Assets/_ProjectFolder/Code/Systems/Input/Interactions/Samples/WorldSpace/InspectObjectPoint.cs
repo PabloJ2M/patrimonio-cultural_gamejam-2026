@@ -47,19 +47,21 @@ namespace UnityEngine.InputSystem.Samples
 
         private IEnumerator LeaveObject()
         {
+            if (!_current) yield break;
+            
             var target = _target;
             var current = _current;
             
             _target = 0f;
             _current = null;
-            
+
             while (target > 0f)
             {
                 yield return null;
                 target -= Time.deltaTime * speed;
-                
-                current.transform.position = Vector3.Lerp(current.OriginPosition, Position, curve.Evaluate(_target));
-                current.transform.rotation = Quaternion.Lerp(current.OriginRotation, Rotation, curve.Evaluate(_target));
+
+                current.transform.position = Vector3.Lerp(current.OriginPosition, Position, curve.Evaluate(target));
+                current.transform.rotation = Quaternion.Lerp(current.OriginRotation, Rotation, curve.Evaluate(target));
             }
             
             current.ForceDisable();
