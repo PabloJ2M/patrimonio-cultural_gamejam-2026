@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private NPC_Sequencer sequencer;
     [SerializeField] private CinemachineVirtualCameraBase focusCamera;
 
+    
+
     private void Awake()
     {
         focusCamera.enabled = false;
@@ -18,6 +20,6 @@ public class GameManager : MonoBehaviour
     public void CompleteInspection()
     {
         focusCamera.enabled = false;
-        sequencer.NextPerson();
+        sequencer.LoadNextSoul();
     }
 }

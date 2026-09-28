@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1838330897124239318}
   - component: {fileID: 5715096643146861930}
   - component: {fileID: 3876428183625920531}
+  - component: {fileID: 1279180810195025264}
   m_Layer: 0
   m_Name: item
   m_TagString: Untagged
@@ -117,6 +118,25 @@ MonoBehaviour:
   useLocalAxis: 1
   rotationLimitMin: {x: -100, y: -45, z: 0}
   rotationLimitMax: {x: -45, y: 45, z: 0}
+--- !u!114 &1279180810195025264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251455006830397178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c320c02d99f344b992eb07458f4ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UkuPacha.MarkingCard
+  lawToggles:
+  - law: 0
+    toggle: {fileID: 7244614423985633677}
+  - law: 1
+    toggle: {fileID: 2633050125060364321}
+  - law: 2
+    toggle: {fileID: 5794162104084770285}
 --- !u!1 &781663016271911948
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +239,7 @@ GameObject:
   - component: {fileID: 3609434661688767913}
   - component: {fileID: 4961165553017190008}
   - component: {fileID: 8299257209594256388}
-  - component: {fileID: 8888967075483065088}
+  - component: {fileID: 5794162104084770285}
   m_Layer: 8
   m_Name: button 3
   m_TagString: Untagged
@@ -320,7 +340,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0000002, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8888967075483065088
+--- !u!114 &5794162104084770285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,19 +349,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 938535506627874342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 686e8d08152f2ed89819f0114849495c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7656561329e1948a48d932da3b9f4e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.EventSystems.Button3D
+  m_EditorClassIdentifier: Assembly-CSharp::Toggle3D
   render: {fileID: 4961165553017190008}
   colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-    m_PressedColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    m_HighlightedColor: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
+    m_PressedColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.348, g: 0.348, b: 0.348, a: 0.5058824}
+    m_DisabledColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 0.6862745}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
-  onClick:
+  isOn: 0
+  onValueChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1837673060301241097
@@ -627,7 +648,7 @@ GameObject:
   - component: {fileID: 2612827508974422926}
   - component: {fileID: 5281967960036870453}
   - component: {fileID: 6164233803849414328}
-  - component: {fileID: 8439255401282996588}
+  - component: {fileID: 2633050125060364321}
   m_Layer: 8
   m_Name: button 2
   m_TagString: Untagged
@@ -728,7 +749,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0000002, z: 0.15}
   m_Center: {x: -0.000000059604645, y: -0.000000029802322, z: 0}
---- !u!114 &8439255401282996588
+--- !u!114 &2633050125060364321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -737,19 +758,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 6935280534025463912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 686e8d08152f2ed89819f0114849495c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7656561329e1948a48d932da3b9f4e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.EventSystems.Button3D
+  m_EditorClassIdentifier: Assembly-CSharp::Toggle3D
   render: {fileID: 5281967960036870453}
   colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-    m_PressedColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    m_HighlightedColor: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
+    m_PressedColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.348, g: 0.348, b: 0.348, a: 0.5058824}
+    m_DisabledColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 0.6862745}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
-  onClick:
+  isOn: 0
+  onValueChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6981957387258087855
@@ -798,7 +820,7 @@ GameObject:
   - component: {fileID: 1343600863918511208}
   - component: {fileID: 8145545598579062734}
   - component: {fileID: 1765250215050616004}
-  - component: {fileID: 2790009899113236419}
+  - component: {fileID: 7244614423985633677}
   m_Layer: 8
   m_Name: button 1
   m_TagString: Untagged
@@ -899,7 +921,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0000002, z: 0.15}
   m_Center: {x: -0.00000011920929, y: 0, z: 0}
---- !u!114 &2790009899113236419
+--- !u!114 &7244614423985633677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,18 +930,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7711530025641657549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 686e8d08152f2ed89819f0114849495c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7656561329e1948a48d932da3b9f4e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.EventSystems.Button3D
+  m_EditorClassIdentifier: Assembly-CSharp::Toggle3D
   render: {fileID: 8145545598579062734}
   colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-    m_PressedColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    m_HighlightedColor: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
+    m_PressedColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.348, g: 0.348, b: 0.348, a: 0.5058824}
+    m_DisabledColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 0.6862745}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
-  onClick:
+  isOn: 0
+  onValueChanged:
     m_PersistentCalls:
       m_Calls: []

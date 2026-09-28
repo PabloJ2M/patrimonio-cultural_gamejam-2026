@@ -2,11 +2,14 @@ using System.Collections;
 
 namespace UnityEngine.InputSystem.Samples
 {
+    using Events;
+
     public class InspectObjectPoint : MonoBehaviour
     {
         [SerializeField] private Transform point;
         [SerializeField] private float speed;
         [SerializeField] private AnimationCurve curve;
+        [SerializeField] private UnityEvent<bool> onStatusChanged;
 
         public static InspectObjectPoint Instance;
         
@@ -31,13 +34,15 @@ namespace UnityEngine.InputSystem.Samples
         public bool SelectObject(InspectObjectSelectable selectable)
         {
             if (_current != null) return false;
-            
+
+            onStatusChanged.Invoke(true);
             _current = selectable;
             return true;
         }
         public void DeselectObject()
         {
             StartCoroutine(LeaveObject());
+            onStatusChanged.Invoke(false);
         }
 
         private IEnumerator LeaveObject()
