@@ -25,8 +25,8 @@ namespace UnityEngine.EventSystems
 
         protected void SetColor(Color color)
         {
-            _propertyBlock.SetColor(ColorID, _defaultColor * color);
-            render.SetPropertyBlock(_propertyBlock);
+            _propertyBlock?.SetColor(ColorID, _defaultColor * color);
+            render?.SetPropertyBlock(_propertyBlock);
         }
     }
 }
