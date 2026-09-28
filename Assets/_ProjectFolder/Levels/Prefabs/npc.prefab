@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9201531148110780810}
   - component: {fileID: 7608982305264945102}
   - component: {fileID: 4894463999053871469}
+  - component: {fileID: 2791577418993188998}
   m_Layer: 8
   m_Name: npc
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineAnimationEvent
   animate: {fileID: 1316588453472323963}
-  animator: {fileID: 4999502578028177976}
+  animator: {fileID: 0}
   curve:
     serializedVersion: 2
     m_Curve:
@@ -187,6 +188,18 @@ MonoBehaviour:
   onDeselect:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2791577418993188998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908490730428374186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df14798964098b1ed913eb4576196aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC
 --- !u!1001 &3504888122965967532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,11 +257,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f4304dafeb9593b78d8fc1bba5aede0, type: 3}
---- !u!95 &4999502578028177976 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: -738009561937762156, guid: 8f4304dafeb9593b78d8fc1bba5aede0, type: 3}
-  m_PrefabInstance: {fileID: 3504888122965967532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8755865449078446013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5269431543049262353, guid: 8f4304dafeb9593b78d8fc1bba5aede0, type: 3}

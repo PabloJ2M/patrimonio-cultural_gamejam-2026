@@ -14,13 +14,15 @@ namespace UkuPacha
 
         private void Awake() => _block = new MaterialPropertyBlock();
         
-        public void SetName(string value) => nameTxt.SetText(value);
-        public void SetAge(int value) => ageTxt.SetText($"Edad: {value}");
-        public void SetOccupation(string value) => occupationTxt.SetText($"Ocupación: {value}");
+        public void SetName(string value) => nameTxt?.SetText(value);
+        public void SetAge(int value) => ageTxt?.SetText($"Edad: {value}");
+        public void SetOccupation(string value) => occupationTxt?.SetText($"Ocupación: {value}");
         public void SetImage(Texture2D value)
         {
+            if (!value) return;
+            
             _block.SetTexture(MainTex, value);
-            imageMesh.SetPropertyBlock(_block);
+            imageMesh?.SetPropertyBlock(_block);
         }
     }
 }

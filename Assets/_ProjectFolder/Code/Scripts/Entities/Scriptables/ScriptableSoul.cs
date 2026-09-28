@@ -8,6 +8,7 @@ public class ScriptableSoul : ScriptableObject
     [Header("Identidad")]
     public string soulStereotype;
     public string description;
+    public GameObject prefab;
     
     [Header("Documentos")]
     public DNIData dni;

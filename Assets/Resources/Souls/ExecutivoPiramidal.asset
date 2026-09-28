@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
   soulStereotype: El Ejecutivo Piramidal
   description: Hombre de negocio fraudulento con reloj falso
+  prefab: {fileID: 141928939715842183, guid: bb027d91fd85f2b1d8e3a5a71a8165b3, type: 3}
   dni:
     name: Carlos Mendoza
     age: 45

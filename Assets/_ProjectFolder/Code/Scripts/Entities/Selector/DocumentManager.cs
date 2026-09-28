@@ -7,26 +7,28 @@ namespace UkuPacha
     {
         [SerializeField] private Dni3D dniObject;
         [SerializeField] private Cv3D cvObject;
+        
+        private NPC_Sequencer _sequencer;
  
-        private NPC_Sequencer sequencer;
- 
-        private void Awake() => sequencer = FindFirstObjectByType<NPC_Sequencer>();
+        private void Awake() => _sequencer = FindFirstObjectByType<NPC_Sequencer>();
         private void OnEnable()
         {
-            if (sequencer)
-                sequencer.OnNewSoulLoaded += ShowDocuments;
+            _sequencer.OnNewSoulLoaded += ShowDocuments;
+            _sequencer.OnSoulReachTable += DropItems;
         }
         private void OnDisable()
         {
-            if (sequencer)
-                sequencer.OnNewSoulLoaded -= ShowDocuments;
+            _sequencer.OnNewSoulLoaded -= ShowDocuments;
+            _sequencer.OnSoulReachTable -= DropItems;
         }
-        
-        private void ShowDocuments(ScriptableSoul soul)
+
+        private void DropItems()
         {
             if (dniObject) dniObject.gameObject.SetActive(true);
             if (cvObject) cvObject.gameObject.SetActive(true);
-            
+        }
+        private void ShowDocuments(ScriptableSoul soul)
+        {
             UpdateDni(soul.dni);
             UpdateCv(soul.cv);
         }

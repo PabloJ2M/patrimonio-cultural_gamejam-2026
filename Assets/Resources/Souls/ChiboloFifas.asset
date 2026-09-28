@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
   soulStereotype: El Chibolo Fifas
   description: Adolescente que usa ropa falsificada
+  prefab: {fileID: 5090991872572673263, guid: 7c3f401c6c8028a41a55c5553ea21aa6, type: 3}
   dni:
     name: "Diego L\xF3pez"
     age: 16

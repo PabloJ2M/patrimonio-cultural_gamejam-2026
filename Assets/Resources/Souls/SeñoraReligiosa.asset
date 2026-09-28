@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
   soulStereotype: "La Se\xF1ora Religiosa"
   description: "Beata que chismea y roba informaci\xF3n"
+  prefab: {fileID: 919132149155446097, guid: a81e3565838ba170f8264743020288f0, type: 3}
   dni:
     name: "Mar\xEDa Delgado"
     age: 61

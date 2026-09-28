@@ -52,7 +52,7 @@ public class Interaction : MonoBehaviour
         if (hitCollider.TryGetComponent(out IInteractable interactable))
             Highlight(interactable);
     }
-
+    
     private void UnHighlight()
     {
         _currentInteraction?.UnHightlighted();

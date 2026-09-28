@@ -7,7 +7,7 @@ namespace UnityEngine.EventSystems
         [SerializeField] protected Renderer render;
         [SerializeField] protected ColorBlock colors;
 
-        private static readonly int ColorID = Shader.PropertyToID("_Color");
+        private static readonly int ColorID = Shader.PropertyToID("_BaseColor");
         private MaterialPropertyBlock _propertyBlock;
         private Color _defaultColor;
 

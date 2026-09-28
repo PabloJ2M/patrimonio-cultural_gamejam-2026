@@ -8,16 +8,16 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        focusCamera.enabled = false;
+        focusCamera.Priority.Value = -10;
     }
     public void Inspection()
     {
-        focusCamera.enabled = true;
+        focusCamera.Priority.Value = 100;
     }
 
     public void CompleteInspection()
     {
-        focusCamera.enabled = false;
+        focusCamera.Priority.Value = -10;
         sequencer.LoadNextSoul();
     }
 }

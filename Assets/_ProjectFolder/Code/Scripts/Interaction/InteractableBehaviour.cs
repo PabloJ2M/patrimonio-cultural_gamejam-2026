@@ -12,7 +12,6 @@ public abstract class InteractableBehaviour : MonoBehaviour, IInteractable
     public virtual void Select(bool isPressed)
     {
         gameObject.SetLayerRecursively(LayerMask.NameToLayer(DefaultLayer));
-        gameObject.SetLayerRecursively(LayerMask.NameToLayer(DefaultLayer));
         IsSelected = isPressed;
     }
 
@@ -26,10 +25,11 @@ public abstract class InteractableBehaviour : MonoBehaviour, IInteractable
     public virtual void UnHightlighted()
     {
         if (!IsHighlighted) return;
-        
-        gameObject.SetLayerRecursively(LayerMask.NameToLayer(BaseLayer));
+
+        ResetLayer();
         IsSelected = IsHighlighted = false;
     }
 
     public void ForceUnInteract() => Select(false);
+    public void ResetLayer() => gameObject.SetLayerRecursively(LayerMask.NameToLayer(BaseLayer));
 }

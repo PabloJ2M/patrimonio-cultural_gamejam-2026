@@ -1,16 +1,37 @@
 using UnityEngine;
+using UnityEngine.Splines;
 
-public class NPC_Spawner : MonoBehaviour
+namespace UkuPacha
 {
-    [SerializeField] private NPC_Sequencer sequencer;
-    [SerializeField] private Transform spawnParent;
-    [SerializeField] private NPC prefab;
-
-    private void OnEnable() => sequencer.OnNewSoulLoaded += Spawn;
-    private void OnDisable() => sequencer.OnNewSoulLoaded -= Spawn;
-    
-    private void Spawn(ScriptableSoul soul)
+    public class NPC_Spawner : MonoBehaviour
     {
-        Instantiate(prefab, spawnParent).Setup(soul);
+        [SerializeField] private NPC_Sequencer sequencer;
+        [SerializeField] private Transform spawnParent;
+        [SerializeField] private NPC prefab;
+
+        private void OnEnable()
+        {
+            sequencer.OnNewSoulLoaded += Spawn;
+            sequencer.OnDesitionTaken += Despawn;
+        }
+        private void OnDisable()
+        {
+            sequencer.OnNewSoulLoaded -= Spawn;
+            sequencer.OnDesitionTaken -= Despawn;
+        }
+        
+        private void Spawn(ScriptableSoul soul)
+        {
+            prefab.transform.position = spawnParent.position;
+            prefab.gameObject.SetActive(true);
+            prefab.Setup(soul);
+            
+            prefab.GetComponent<SplineAnimate>().Restart(true);
+        }
+
+        private void Despawn(bool sendToHeaven)
+        {
+            prefab.gameObject.SetActive(false);
+        }
     }
 }

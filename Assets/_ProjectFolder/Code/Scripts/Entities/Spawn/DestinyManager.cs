@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,36 +5,46 @@ namespace UkuPacha
 {
     public class DestinyManager : MonoBehaviour
     {
+        [SerializeField] private DocumentManager documentManager;
         [SerializeField] private MarkingCard markingCard;
+        
         [SerializeField] private Button3D hananPachaButton;
         [SerializeField] private Button3D kayPachaButton;
 
-        private GameManager _manager;
+        private GameManager _gameManager;
         private NPC_Sequencer _sequencer;
         
         private void Awake()
         {
+            _gameManager = FindFirstObjectByType<GameManager>();
             _sequencer = FindFirstObjectByType<NPC_Sequencer>();
-            hananPachaButton.OnClick.AddListener(() => PullLever(hananPachaButton, true));
-            kayPachaButton.OnClick.AddListener(() => PullLever(kayPachaButton, false));
+            hananPachaButton.OnClick.AddListener(() => PullLever(true));
+            kayPachaButton.OnClick.AddListener(() => PullLever(false));
         }
 
-        private void OnEnable() => _sequencer.OnNewSoulLoaded += ResetButtons;
-        private void OnDisable() => _sequencer.OnNewSoulLoaded -= ResetButtons;
+        private void OnEnable() => _sequencer.OnSoulReachTable += ResetButtons;
+        private void OnDisable() => _sequencer.OnSoulReachTable -= ResetButtons;
 
-        private void ResetButtons(ScriptableSoul soul)
+        private void DisableButtons()
+        {
+            hananPachaButton.SetInteractable(false);
+            kayPachaButton.SetInteractable(false);
+        }
+        private void ResetButtons()
         {
             hananPachaButton.SetInteractable(true);
             kayPachaButton.SetInteractable(true);
         }
-        private void PullLever(Button3D button, bool toHananPacha)
+        private void PullLever(bool toHananPacha)
         {
             if (!_sequencer) return;
             
-            _sequencer.OnDestinyDecided(toHananPacha, markingCard.GetMarkedLaws);
-            markingCard.ResetMarks();
+            _gameManager?.CompleteInspection();
+            _sequencer?.OnDestinyDecided(toHananPacha, markingCard.GetMarkedLaws);
             
-            button.SetInteractable(false);
+            documentManager?.HideDocuments();
+            markingCard?.ResetMarks();
+            DisableButtons();
         }
     }
 }

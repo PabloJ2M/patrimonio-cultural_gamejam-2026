@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
   soulStereotype: "La Se\xF1ora Chacrosa"
   description: "Vendedora de cuarzos falsos como aut\xE9nticos"
+  prefab: {fileID: 4785946230129741739, guid: 8f4304dafeb9593b78d8fc1bba5aede0, type: 3}
   dni:
     name: "Rosa Garc\xEDa"
     age: 52
