@@ -18,8 +18,7 @@ public class NPC_Sequencer : MonoBehaviour
 
     public event Action<ScriptableSoul> OnNewSoulLoaded;
     public event Action OnSoulReachTable;
-    public event Action<int, int> OnScoreChanged;
-    public event Action<int> OnStrikesChanged;
+    public event Action<int, int> OnScoreChanged, OnStrikesChanged;
     public event Action<bool> OnGameOver, OnDesitionTaken;
     
     public ScriptableSoul GetCurrentSoul => _currentScriptableSoul;
@@ -28,11 +27,7 @@ public class NPC_Sequencer : MonoBehaviour
     public int GetCurrentDay => _currentDay;
     public bool IsGameOver => _gameOver;
 
-    private void Start()
-    {
-        LoadNextSoul();
-    }
-
+    private void Start() => LoadNextSoul();
     public void LoadNextSoul()
     {
         if (currentSoulIndex >= souls.Length) {
@@ -44,7 +39,6 @@ public class NPC_Sequencer : MonoBehaviour
         OnNewSoulLoaded?.Invoke(_currentScriptableSoul);
         StartCoroutine(DropDelay());
     }
-
     private IEnumerator DropDelay()
     {
         yield return new WaitUntil(() => animate.IsPlaying);
@@ -63,7 +57,7 @@ public class NPC_Sequencer : MonoBehaviour
         if (!isCorrect)
         {
             _strikeCount++;
-            OnStrikesChanged?.Invoke(_strikeCount);
+            OnStrikesChanged?.Invoke(_strikeCount, maxStrikes);
 
             if (_strikeCount >= maxStrikes) {
                 EndGame();
@@ -71,13 +65,13 @@ public class NPC_Sequencer : MonoBehaviour
             }
         }
         
-        _totalScore += roundScore;
-        OnScoreChanged?.Invoke(roundScore, _totalScore);
-
         currentSoulIndex++;
         if (currentSoulIndex % 3 == 0 && currentSoulIndex < souls.Length)
             _currentDay++;
 
+        _totalScore += roundScore;
+        OnScoreChanged?.Invoke(roundScore, _totalScore);
+        
         Invoke(nameof(LoadNextSoul), 2f);
     }
 

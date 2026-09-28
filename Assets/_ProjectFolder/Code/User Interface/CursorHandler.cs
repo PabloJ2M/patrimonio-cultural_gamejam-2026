@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CursorHandler : MonoBehaviour
 {
+    [SerializeField] private GameObject crosshair;
     [SerializeField] private bool isVisible;
     private bool _wasForced;
     
@@ -10,9 +11,11 @@ public class CursorHandler : MonoBehaviour
     public void SetCursorStatus(bool isCursorVisible)
     {
         if (_wasForced) return;
+        print("set status");
         
         Cursor.visible = isCursorVisible;
         Cursor.lockState = isCursorVisible ? CursorLockMode.None : CursorLockMode.Locked;
+        crosshair.SetActive(!isCursorVisible);
     }
     
     public void CursorLook() => SetCursorStatus(false);
@@ -27,5 +30,6 @@ public class CursorHandler : MonoBehaviour
     {
         CursorUnlock();
         _wasForced = true;
+        print("unlocked");
     }
 }
