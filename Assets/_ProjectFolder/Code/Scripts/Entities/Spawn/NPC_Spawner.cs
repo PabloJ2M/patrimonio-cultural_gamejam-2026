@@ -27,11 +27,12 @@ namespace UkuPacha
             prefab.Setup(soul);
             
             prefab.GetComponent<SplineAnimate>().Restart(true);
+            prefab.GetComponent<SplineAnimator>().RefreshAnimator();
         }
 
         private void Despawn(bool sendToHeaven)
         {
-            prefab.gameObject.SetActive(false);
+            prefab.GetComponentInChildren<Animator>().SetTrigger(sendToHeaven ? "Good" : "Bad");
         }
     }
 }

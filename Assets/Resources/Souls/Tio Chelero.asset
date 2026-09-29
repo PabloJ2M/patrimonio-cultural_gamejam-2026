@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: Tio Chelero
+  m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
+  prefab: {fileID: 1082552919647742742, guid: 0f9653f7194d596ee8d917f5396fed4a, type: 3}
+  soulStereotype: "El T\xEDo Chelero"
+  description: Vive en casa de sus padres, se queja cuando no hay almuerzo hecho,
+    no colabora para los gastos del hogar y todo el dinero de sus trabajos los gasta
+    en cerveza.
+  dni:
+    name: "Jos\xE9 Sunci\xF3n"
+    age: 58
+    occupation: Obrero jubilado
+    identityDeclaration: Padre responsable
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: "Roberto Jim\xE9nez"
+    profession: "Ex-trabajador de construcci\xF3n"
+    yearsOfExperience: 30
+    achievements:
+    - "Trabajar incansablemente en construcci\xF3n y pintura pesada para mantener
+      la casa de sus padres solo porque sabe que se la dejar\xE1n toda a \xE9l"
+    - Golpear a sus padre repetidamente cuando le reclaman por llegar borracho
+    - "Consumir alcohol excesivamente los fines de semana en la v\xEDa p\xFAblica
+      causando esc\xE1ndalo social"
+    - Promover apuestas informales brutales de gallos y peleas locales organizando
+      a la vecindad
+    crimes:
+    - description: "Recibos de pensi\xF3n de alimentos vencidos"
+      visualEvidence: "Papeles amarillos en caja de cervezas vac\xEDas"
+      lawBroken: 2
+  belongings: []
+  actualLawsBroken: 02000000
+  isGoodSoul: 0
+  appearDay: 1

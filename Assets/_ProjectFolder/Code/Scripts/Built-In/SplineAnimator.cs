@@ -9,14 +9,23 @@ public class SplineAnimator : MonoBehaviour
     
     private static readonly int Speed = Animator.StringToHash("Speed");
 
-    private async void OnEnable()
+    public async void RefreshAnimator()
     {
         await Awaitable.WaitForSecondsAsync(0.1f);
         animator = GetComponentInChildren<Animator>();
     }
+    // private async void OnEnable()
+    // {
+    //     await Awaitable.WaitForSecondsAsync(0.1f);
+    //     animator = GetComponentInChildren<Animator>();
+    // }
     private void Update()
     {
-        if (animator && animate.IsPlaying)
+        if (!animator) return;
+        
+        if (animate.IsPlaying)
             animator?.SetFloat(Speed, curve.Evaluate(animate.ElapsedTime / animate.Duration));
+        else
+            animator?.SetFloat(Speed, 0);
     }
 }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: Chica Radical (Pelo Pintado)
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableSoul
+  prefab: {fileID: 2301902456272686606, guid: e0b6aeaf4a18a522da82de02527566ff, type: 3}
+  soulStereotype: 
+  description: "Ofenderse por todo y por nada es su religi\xF3n, ella no est\xE1
+    mal, es el mundo que no la entiende y las personas que no se adaptan para que
+    ella pueda vivir sin sentirse oprimida, n\xFAmero 1 cuando se habla de pol\xEDtica,
+    cree firmemente que su perro es vegano por elecci\xF3n\u2026"
+  dni:
+    name: "Sof\xEDa Guerra"
+    age: 0
+    occupation: 
+    identityDeclaration: 
+    photo: {fileID: 0}
+    isAuthentic: 0
+  cv:
+    name: 
+    profession: 
+    yearsOfExperience: 0
+    achievements:
+    - "Liderar marchas de protesta intensas combatiendo la represi\xF3n contra los
+      therian"
+    - "Realizar pintadas y destrozos en la propiedad p\xFAblica y privada para llamar
+      la atenci\xF3n sobre causas sociales"
+    - "Faltar al respeto, cancelar p\xFAblicamente y golpear constantemente a personas
+      mayores por mantener costumbres tradicionales"
+    - Trabajar como voluntaria a tiempo completo organizando comedores comunitarios
+      para personas sin hogar, solo porque los consideraba eco-friendly (a ellos)
+    crimes: []
+  belongings: []
+  actualLawsBroken: 
+  isGoodSoul: 1
+  appearDay: 1

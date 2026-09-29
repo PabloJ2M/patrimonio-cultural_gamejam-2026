@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: barrio
+  m_Controller: {fileID: 9100000, guid: 5b7c199c85f6c3510b6f1754210bd350, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b8d217c8e5c4a649ba8731fef8f99c1b, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 641f1ae1b1ea4afd78b8c4cf627592e6, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 47a87e5e4b45410578d14d2b81609c55, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: b5d537bdb91dcc6b49f6ab60e289c553, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 0644e8547ed9f8959b027d2e7f9507d4, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 460b31f7bed1d3588bea5bd1f8a51093, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7861d78b94d58c15ab369ec98a55eb1b, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 43445e811101441ed9d172b1c14d75c2, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 0af9bfc5a7733fc9192d3226c80deed0, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: a73db17963fb1a4fca8e8dd386dcc215, type: 3}

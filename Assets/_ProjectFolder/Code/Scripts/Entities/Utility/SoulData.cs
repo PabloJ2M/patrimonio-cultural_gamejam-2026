@@ -17,6 +17,8 @@ public class CVData
     public string name;
     public string profession;
     public int yearsOfExperience;
+    
+    [TextArea(1, 10)]
     public string[] achievements;
     public SoulCrime[] crimes;
 }

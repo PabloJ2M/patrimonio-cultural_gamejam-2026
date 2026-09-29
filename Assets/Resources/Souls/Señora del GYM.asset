@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: "Se\xF1ora del GYM"
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableSoul
+  prefab: {fileID: 8211217751488178193, guid: bcc95bf7af098f31295e751d12ff9b67, type: 3}
+  soulStereotype: 
+  description: "El d\xEDa comienza a las 9 a.m. Entrenamiento en el gym con su trainer
+    Yaco mientras le cuenta de su perrijo, pilates a las 10 con su teacher Amanda
+    mientras le cuenta de su perrijo y su brunch a las 11 con sus amigas del cole
+    del nene para quejarse de sus perrijos\u2026"
+  dni:
+    name: Alexandra Respingada
+    age: 0
+    occupation: 
+    identityDeclaration: 
+    photo: {fileID: 0}
+    isAuthentic: 0
+  cv:
+    name: 
+    profession: 
+    yearsOfExperience: 0
+    achievements:
+    - "Enga\xF1ar a su esposo reiteradamente con su entrenador del gym Yaco."
+    - "Entrenar diariamente con disciplina rigurosa para mantener su estado f\xEDsico
+      y promover la salud"
+    crimes:
+    - description: "Presentar certificados m\xE9dicos falsificados para ausentarse
+        del trabajo y atender emergencias de su perro pug"
+      visualEvidence: 
+      lawBroken: 0
+    - description: Delegar completamente el cuidado de su hogar y de sus responsabilidades
+        diarias a empleados para pasar sus fines de semana descansando en el spa
+      visualEvidence: 
+      lawBroken: 2
+  belongings: []
+  actualLawsBroken: 0000000002000000
+  isGoodSoul: 0
+  appearDay: 1

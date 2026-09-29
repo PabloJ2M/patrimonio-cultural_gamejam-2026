@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: chacrosa
+  m_Controller: {fileID: 9100000, guid: 5b7c199c85f6c3510b6f1754210bd350, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0af9bfc5a7733fc9192d3226c80deed0, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: b5284847955c414a08ed10176a5ad40a, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7861d78b94d58c15ab369ec98a55eb1b, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: ead7b80fbe057b2f3a36b3d87b786904, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: b8d217c8e5c4a649ba8731fef8f99c1b, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 604eb5bee81c323a2bc8755f09608010, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 0644e8547ed9f8959b027d2e7f9507d4, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 369a74534f135d8808e0ea1c36ca3d08, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 47a87e5e4b45410578d14d2b81609c55, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: ba107d884dbdca9afac11c8106b1c650, type: 3}

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: Executivo Piramidal
+  m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
+  prefab: {fileID: 8616375320742728152, guid: f06f700f785a85537b8fd6633eb3493c, type: 3}
+  soulStereotype: El Ejecutivo Piramidal
+  description: "Siempre al tanto de las tendencias tecnol\xF3gicas, te habla de bitcoin,
+    inversiones y constantemente pide que invites a tus familiares para ayudarlos
+    a invertir en bolsa."
+  dni:
+    name: Mark Evans
+    age: 45
+    occupation: Empresario
+    identityDeclaration: "Due\xF1o de Piramidal Inc."
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: Carlos Mendoza
+    profession: CEO
+    yearsOfExperience: 20
+    achievements:
+    - "Leer libros de educaci\xF3n financiera diariamente y capacitar constantemente
+      a su equipo de trabajo"
+    crimes:
+    - description: Captar personas para una red piramidal prometiendo retornos irreales
+        para ayudarlos a salir de la pobreza
+      visualEvidence: 
+      lawBroken: 0
+    - description: Retener parte del capital de los afiliados para cubrir deudas
+        de salud urgentes de su familia golpeada
+      visualEvidence: 
+      lawBroken: 1
+    - description: "Convencer a familiares de vender sus propiedades para invertir
+        asegur\xE1ndoles un futuro brillante"
+      visualEvidence: 
+      lawBroken: 0
+  belongings: []
+  actualLawsBroken: 0000000001000000
+  isGoodSoul: 0
+  appearDay: 1

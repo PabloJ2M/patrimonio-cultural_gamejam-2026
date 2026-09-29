@@ -11,7 +11,6 @@ public class CursorHandler : MonoBehaviour
     public void SetCursorStatus(bool isCursorVisible)
     {
         if (_wasForced) return;
-        print("set status");
         
         Cursor.visible = isCursorVisible;
         Cursor.lockState = isCursorVisible ? CursorLockMode.None : CursorLockMode.Locked;
@@ -30,6 +29,5 @@ public class CursorHandler : MonoBehaviour
     {
         CursorUnlock();
         _wasForced = true;
-        print("unlocked");
     }
 }

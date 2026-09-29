@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: "Se\xF1ora Signos"
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableSoul
+  prefab: {fileID: 0}
+  soulStereotype: 
+  description: "Palo santo todas las ma\xF1anas al despertar, visitas constantes
+    a los mercadillos de pulgas y mucha acumulaci\xF3n de compras, su casa llena
+    de mandalas y todo tipo de runas. Elige a sus amigos en base a su signo y su
+    fecha de nacimiento. No tiene pareja porque considera que tiene una conexi\xF3n
+    astral con su gato."
+  dni:
+    name: Sol Villa
+    age: 0
+    occupation: 
+    identityDeclaration: 
+    photo: {fileID: 0}
+    isAuthentic: 0
+  cv:
+    name: 
+    profession: 
+    yearsOfExperience: 0
+    achievements:
+    - Cuidar animales abandonados y rescatar gatos callejeros dedicando todo su tiempo
+      libre
+    crimes:
+    - description: "Cobrar por lecturas astron\xF3micas falsas inventando augurios
+        para dar paz psicol\xF3gica a otros"
+      visualEvidence: 
+      lawBroken: 0
+    - description: "Tomar insumos de sanaci\xF3n de tiendas manifestando necesidad
+        del universo de curar gratis a enfermos"
+      visualEvidence: 
+      lawBroken: 1
+    - description: "Aislarse d\xEDas enteros de la sociedad descuidando obligaciones
+        personales justificando mantener limpiezas energ\xE9ticas"
+      visualEvidence: 
+      lawBroken: 2
+  belongings: []
+  actualLawsBroken: 000000000100000002000000
+  isGoodSoul: 0
+  appearDay: 1

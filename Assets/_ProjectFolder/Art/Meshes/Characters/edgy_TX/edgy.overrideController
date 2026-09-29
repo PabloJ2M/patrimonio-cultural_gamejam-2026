@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: edgy
+  m_Controller: {fileID: 9100000, guid: 5b7c199c85f6c3510b6f1754210bd350, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0af9bfc5a7733fc9192d3226c80deed0, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: f38968530279b3afca8cf0ae6997ddf8, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 7861d78b94d58c15ab369ec98a55eb1b, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 23f4b9e865b4f38a59cb1ec369364985, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: b8d217c8e5c4a649ba8731fef8f99c1b, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 965522c004ac51e5386d72f626084549, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 0644e8547ed9f8959b027d2e7f9507d4, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: c9603ca8e4a947a7d8ac4bb298803db1, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 47a87e5e4b45410578d14d2b81609c55, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 98a16b98b174ec75d8b07aad0d7c3b95, type: 3}

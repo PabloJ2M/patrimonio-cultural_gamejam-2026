@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: Politico
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableSoul
+  prefab: {fileID: 6860448393776296074, guid: 31167e12223e10de1b452dc7b82f33ca, type: 3}
+  soulStereotype: 
+  description: "\xA1Plata como popcorn! Ganar sin importar que, siempre primero en
+    las encuestas (que hace su partido). Regalar polos a cambio de votos es el pan
+    de cada d\xEDa. \u201CDoctorado en robar, primaria incompleta en hacer obras\u201D."
+  dni:
+    name: "Caser A\xF1uca"
+    age: 0
+    occupation: 
+    identityDeclaration: 
+    photo: {fileID: 0}
+    isAuthentic: 0
+  cv:
+    name: 
+    profession: 
+    yearsOfExperience: 0
+    achievements:
+    - "La Fiscal\xEDa present\xF3 denuncias se\xF1alando a A\xF1uca como presunto
+      autor de delitos contra la vida, el cuerpo y la salud, a ra\xEDz de la muerte
+      de 50 personas y cientos de heridos durante las movilizaciones contra su campa\xF1a
+      pol\xEDtica."
+    - "Aprobar el nombramiento de allegados mediante concursos p\xFAblicos ama\xF1ados
+      pero formal y legalmente v\xE1lidos"
+    - "Intent\xF3 disolver 2 veces el Congreso de la Rep\xFAblica para crear una
+      dictadura, ambos intentos fallaron."
+    - "Mando silenciar a un grupo de  3 periodistas que intentaron revelar p\xFAblicamente
+      sus actos de lujuria en el Palacio Presidencial."
+    crimes: []
+  belongings: []
+  actualLawsBroken: 
+  isGoodSoul: 1
+  appearDay: 1

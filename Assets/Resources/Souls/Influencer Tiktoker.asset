@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: Influencer Tiktoker
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableSoul
+  soulStereotype: 
+  description: "TikToker que vende \u201Clifestyle\u201D, comparte su d\xEDa a d\xEDa
+    con sus \u201Cbrothers\u201D y en su U manyada."
+  prefab: {fileID: 0}
+  dni:
+    name: 'Alessandro Riccetti  '
+    age: 0
+    occupation: 
+    identityDeclaration: 
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: 'Alessandro Riccetti  '
+    profession: 'TikToker '
+    yearsOfExperience: 0
+    achievements:
+    - Subir blogs diarios editando de noche para mantener a su familia
+    crimes:
+    - description: "Promocionar suplementos de salud dudosos para pagar el tratamiento
+        m\xE9dico urgente de su abuela"
+      visualEvidence: 
+      lawBroken: 0
+    - description: "Organizar colectas ben\xE9ficas en redes usando im\xE1genes de
+        ni\xF1os vulnerables para conmover donantes"
+      visualEvidence: 
+      lawBroken: 0
+    - description: "Usar la tarjeta de cr\xE9dito de su pap\xE1 sin permiso para
+        costear los v\xEDveres de una familia necesitada  "
+      visualEvidence: 
+      lawBroken: 1
+  belongings: []
+  actualLawsBroken: 0000000001000000
+  isGoodSoul: 0
+  appearDay: 1

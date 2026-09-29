@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: "Se\xF1ora Chacrosa"
+  m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
+  prefab: {fileID: 8706349544301207178, guid: 41c6ebee81ae82372a754f6c44c656e5, type: 3}
+  soulStereotype: "La Se\xF1ora Chismosa"
+  description: Va a la iglesia todos los domingos, tiene un altar a todos los santos
+    posible en su casa, le encanta fingir que barre la calle siempre que hay problemas
+    afuera, se infarta por las nuevas modas.
+  dni:
+    name: Delfina Salcedo
+    age: 52
+    occupation: Vendedora de minerales
+    identityDeclaration: Experta en cuarzos naturales
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: "Rosa Garc\xEDa"
+    profession: Curadora de Cristales
+    yearsOfExperience: 15
+    achievements:
+    - Organizar jornadas comunitarias agotadoras en la parroquia para cocinar a personas
+      en abandono
+    crimes:
+    - description: "Exagerar rumores sobre un vecino peligroso para alertar y proteger
+        a los j\xF3venes del barrio"
+      visualEvidence: 
+      lawBroken: 0
+    - description: "Inventar milagros de santos para dar consuelo psicol\xF3gico
+        a vecinos enfermos en etapa terminal"
+      visualEvidence: Logo de Shutterstock en la esquina
+      lawBroken: 0
+    - description: Quedarse con el vuelto de las compras parroquiales para financiar
+        ayuda secreta a un albergue
+      visualEvidence: Logo de Shutterstock en la esquina
+      lawBroken: 1
+  belongings: []
+  actualLawsBroken: 0000000001000000
+  isGoodSoul: 0
+  appearDay: 1

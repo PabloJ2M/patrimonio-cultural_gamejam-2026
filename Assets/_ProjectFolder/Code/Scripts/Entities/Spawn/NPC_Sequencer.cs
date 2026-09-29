@@ -39,6 +39,16 @@ public class NPC_Sequencer : MonoBehaviour
         OnNewSoulLoaded?.Invoke(_currentScriptableSoul);
         StartCoroutine(DropDelay());
     }
+    private void UpdateCurrentDay()
+    {
+        _currentDay = currentSoulIndex switch
+        {
+            < 3 => 1,
+            < 6 => 2,
+            _ => 3
+        };
+    }
+    
     private IEnumerator DropDelay()
     {
         yield return new WaitUntil(() => animate.IsPlaying);
@@ -51,7 +61,8 @@ public class NPC_Sequencer : MonoBehaviour
         if (_gameOver) return;
 
         var isCorrect = _currentScriptableSoul.VerifyVerdict(markedLaws, sentToHananPacha);
-        var roundScore = _currentScriptableSoul.CalculateScore(markedLaws);
+        
+        var roundScore = _currentScriptableSoul.CalculateScore(markedLaws, sentToHananPacha);
         OnDesitionTaken?.Invoke(sentToHananPacha);
 
         if (!isCorrect)
@@ -78,6 +89,6 @@ public class NPC_Sequencer : MonoBehaviour
     private void EndGame()
     {
         _gameOver = true;
-        OnGameOver?.Invoke(_totalScore >= 300);
+        OnGameOver?.Invoke(_totalScore >= 750);
     }
 }

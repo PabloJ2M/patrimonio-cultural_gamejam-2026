@@ -18,6 +18,6 @@ public class GameManager : MonoBehaviour
     public void CompleteInspection()
     {
         focusCamera.Priority.Value = -10;
-        sequencer.LoadNextSoul();
+        // sequencer.LoadNextSoul();
     }
 }

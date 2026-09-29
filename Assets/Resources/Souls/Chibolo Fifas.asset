@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ecf205652ca0c9b98f2376e510626, type: 3}
+  m_Name: Chibolo Fifas
+  m_EditorClassIdentifier: Assembly-CSharp::SoulScriptable
+  prefab: {fileID: 7917285362387863753, guid: edc7c186d175a48c1836030da36b9f42, type: 3}
+  soulStereotype: El Chibolo Fifas
+  description: "Vive y muere por el f\xFAtbol, necesita jugar todos los fines de
+    semana, apuesta siempre en combinadas desde ligas amateurs hasta profesionales.
+    Su primer gasto luego del pago mensual es la apuesta a su equipo favorito de
+    la 2da Divisi\xF3n del Congo."
+  dni:
+    name: Alexis Carranza
+    age: 16
+    occupation: Estudiante
+    identityDeclaration: "Coleccionista de sneakers aut\xE9nticos"
+    photo: {fileID: 0}
+    isAuthentic: 1
+  cv:
+    name: "Diego L\xF3pez"
+    profession: Influencer en redes
+    yearsOfExperience: 1
+    achievements:
+    - "Trabaja para saldar sus cuentas de pr\xE9stamos que sac\xF3 con los sicarios
+      del \u201CFerrocarril\u201D"
+    - Gastar despiadadamente el dinero destinado a sus almuerzos en apuestas combinadas
+      de ligas africanas
+    - "Burlarse cruelmente de sus amigos lesionados en la cancha y provocar peleas
+      en el barrio, en una ocasi\xF3n le ocasion\xF3 una conmoci\xF3n cerebral a
+      un ni\xF1o que se cruz\xF3 por su pelea"
+    - "Dicta clases de f\xFAtbol gratis a los ni\xF1os de su barrio para evitar que
+      caigan en las drogas"
+    crimes: []
+  belongings: []
+  actualLawsBroken: 
+  isGoodSoul: 1
+  appearDay: 1

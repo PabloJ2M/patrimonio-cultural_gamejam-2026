@@ -6,9 +6,11 @@ using UnityEngine;
 public class ScriptableSoul : ScriptableObject
 {
     [Header("Identidad")]
-    public string soulStereotype;
-    public string description;
     public GameObject prefab;
+    public string soulStereotype;
+    
+    [TextArea(1, 10)]
+    public string description;
     
     [Header("Documentos")]
     public DNIData dni;
@@ -34,20 +36,20 @@ public class ScriptableSoul : ScriptableObject
         var destinyCorrect = (sentToHananPacha == isGoodSoul);
         return marksCorrect && destinyCorrect;
     }
-    
-    public int CalculateScore(HashSet<AndineLawType> markedLaws)
+    public int CalculateScore(HashSet<AndineLawType> markedLaws, bool sentToHananPacha)
     {
-        var correctMarks = 0;
-        var falsePositives = 0;
+        if (!VerifyVerdict(markedLaws, sentToHananPacha))
+            return 0;
+        
+        var correctLawCount = 0;
         
         foreach (var marked in markedLaws)
         {
             if (System.Array.Exists(actualLawsBroken, x => x == marked))
-                correctMarks++;
-            else
-                falsePositives++;
+                correctLawCount++;
         }
 
-        return (correctMarks * 50) - (falsePositives * 25);
+        var score = 40 + (correctLawCount * 20);
+        return score;
     }
 }
