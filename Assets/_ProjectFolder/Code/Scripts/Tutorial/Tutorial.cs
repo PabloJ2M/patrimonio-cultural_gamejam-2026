@@ -25,21 +25,25 @@ public class Tutorial : MonoBehaviour
     }
     public void Next()
     {
-        _index++;
-
-        if (_index >= messages.Length) {
-            onComplete?.Invoke();
-            dialogueTween?.FadeOut();
-            cursorHandler?.CursorLookForced();
-            return;
-        }
-
         StopAllCoroutines();
-        
+
         if (!_isTyping)
+        {
+            _index++;
+            
+            if (_index >= messages.Length) {
+                onComplete?.Invoke();
+                dialogueTween?.FadeOut();
+                cursorHandler?.CursorLookForced();
+                return;
+            }
+            
             StartCoroutine(WriteText(messages[_index]));
-        else
+        }
+        else  {
+            _isTyping = false;
             SetAllAlpha(255);
+        }
     }
 
     private IEnumerator WriteText(string message)

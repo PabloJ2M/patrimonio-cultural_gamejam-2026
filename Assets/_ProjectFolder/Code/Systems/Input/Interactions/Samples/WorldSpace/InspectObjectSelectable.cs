@@ -24,7 +24,7 @@ namespace UnityEngine.InputSystem.Samples
             OriginPosition = transform.position;
             OriginRotation = transform.rotation;
         }
-        
+
         protected override void OnPointerUpdate(InputAction.CallbackContext ctx) { }
 
         protected override void OnSelect()
